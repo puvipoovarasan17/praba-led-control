@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-festival-dark text-white font-sans antialiased;
+    background-image: 
+      radial-gradient(circle at 15% 50%, rgba(233, 30, 99, 0.08), transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(63, 81, 181, 0.08), transparent 25%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-festival-card backdrop-blur-md border border-white/10 rounded-xl p-6 shadow-xl;
+  }
+  
+  .btn-primary {
+    @apply bg-festival-primary hover:bg-pink-500 text-white font-bold py-2 px-4 rounded-lg transition-colors shadow-[0_0_15px_rgba(233,30,99,0.5)] hover:shadow-[0_0_25px_rgba(233,30,99,0.8)];
+  }
+  
+  .btn-secondary {
+    @apply bg-festival-secondary hover:bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg transition-colors shadow-[0_0_15px_rgba(63,81,181,0.5)];
+  }
+  
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-4 rounded-lg transition-colors shadow-[0_0_15px_rgba(220,38,38,0.5)];
+  }
+
+  .btn-outline {
+    @apply bg-transparent border border-white/20 hover:bg-white/10 text-white font-semibold py-2 px-4 rounded-lg transition-colors;
+  }
+  
+  .input-field {
+    @apply bg-black/50 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-festival-primary focus:ring-1 focus:ring-festival-primary transition-all;
+  }
+}
